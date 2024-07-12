@@ -10,7 +10,7 @@ const prisma = new PrismaClient();
 router.post('/referral', async (req, res) => {
   const { referrerName, referrerEmail, refereeName, refereeEmail, courseName } = req.body;
 
-  console.log(req.body);
+  // console.log(req.body);
 
   if (!referrerName || !referrerEmail || !refereeName || !refereeEmail || !courseName) {
     return res.status(400).json({ error: 'All fields are required' });
